@@ -3,7 +3,7 @@
 // необходимо просто поменять знак (<) на (>) внутри метода BubbleSort!
 
 Console.Clear();
-int size = 25;
+int size = 10;
 int[] array = new int[size];
 
 void FillArray(int[] arr)
@@ -20,7 +20,7 @@ void PrintArray(int[] arr)
     {
         if (i == 0) Console.Write("[");
         if (i < arr.Length - 1) Console.Write(arr[i] + ",");
-        else Console.Write("]");
+        else Console.Write(arr[i] + "]");
     }
 }
 
@@ -28,7 +28,7 @@ void BubbleSort(int[] arr)
 {
     var n = array.Length;
 
-    for (int i = 0; i < n - 1; i++)
+    for (int i = 0; i < n; i++)
     {
         for (int j = 0; j < n - i - 1; j++)
         {
@@ -44,7 +44,9 @@ void BubbleSort(int[] arr)
 }
 
 FillArray(array);
+Console.Write("Unsorted array =>");
 PrintArray(array);
 BubbleSort(array);
 Console.WriteLine();
+Console.Write("Sorted array =>  ");
 PrintArray(array);
